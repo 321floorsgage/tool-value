@@ -1,0 +1,12 @@
+node_modules
+dist
+dist-artifact
+coverage
+playwright-report
+test-results
+.env
+.env.local
+.env.*.local
+.netlify
+*.log
+.DS_Store

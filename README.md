@@ -82,12 +82,16 @@ preview/                     Artifact-preview-only data source (see below)
 
 **Profit:** cash profit = expected resale − price − fees − shipping; risk-adjusted = cash profit − risk buffer. The $40 target is not subtracted again because it's already built into the buy ceilings.
 
+**Product image:** each catalog row carries `image_url`, `image_alt`, and `image_source_url` for the exact model. The image is model-level, so it stays put when you switch Local and eBay. A missing or broken image falls back to a same-size placeholder showing the model number and "Image unavailable", and never blocks the valuation. No image URLs are hardcoded in the app.
+
 **Insufficient data:** a missing buy threshold, or a row with `confidence_label = "insufficient"` or zero samples, gets no verdict. A missing fee, shipping, or risk value shows "Insufficient data" for that metric and its profit line. Unsupported models get "We don't have enough verified data for this model yet." and no estimate.
 
 ## Artifact preview vs. deployed app
 
 Claude Artifact pages can't make network requests, so the preview can't reach Supabase. `npm run build:artifact` builds the **same** components, calculations, and styles into one HTML file and swaps only the data source (via the `@catalog-source` alias in `vite.config.ts`) for `preview/catalog-snapshot.json`, a read-only copy of the live view. The preview labels this on screen. The Netlify build never includes that file and never falls back to it.
 
+Artifact pages also can't load third-party images, so the preview shows the "Image unavailable" placeholder for every model. The Netlify build loads the real product images from the URLs in the catalog.
+
 ## Data contract
 
-The app depends on the 25 columns in `src/types/catalog.ts`. If Codex changes the view, update that type, `src/lib/catalogQuery.ts`, the parser in `src/lib/catalog.ts`, and the tests. Database changes go through Codex using the `DATABASE CONTRACT REQUEST` format.
+The app depends on the 28 columns in `src/types/catalog.ts`. If Codex changes the view, update that type, `src/lib/catalogQuery.ts`, the parser in `src/lib/catalog.ts`, and the tests. Database changes go through Codex using the `DATABASE CONTRACT REQUEST` format.
