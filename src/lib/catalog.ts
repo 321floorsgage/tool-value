@@ -30,6 +30,15 @@ function toNullableNumber(value: unknown, field: string): number | null {
   return n;
 }
 
+/** Only https URLs are trusted; anything else is treated as missing. */
+function toHttpsUrl(value: unknown): string | null {
+  return typeof value === "string" && value.startsWith("https://") ? value : null;
+}
+
+function toText(value: unknown): string | null {
+  return typeof value === "string" && value.trim() ? value.trim() : null;
+}
+
 function isChannel(value: unknown): value is SalesChannel {
   return value === "local" || value === "ebay";
 }
@@ -67,6 +76,9 @@ export function parseCatalogRows(input: unknown): ToolValueCatalogRow[] {
       sold_sample_count: toNullableNumber(r.sold_sample_count, "sold_sample_count") ?? 0,
       confidence_label: String(r.confidence_label ?? "insufficient"),
       planning_note: typeof r.planning_note === "string" ? r.planning_note : null,
+      image_url: toHttpsUrl(r.image_url),
+      image_alt: toText(r.image_alt),
+      image_source_url: toHttpsUrl(r.image_source_url),
       valuation_run_id: toNullableNumber(r.valuation_run_id, "valuation_run_id") ?? 0,
       calculated_at: String(r.calculated_at ?? ""),
       refreshed_at: String(r.refreshed_at ?? ""),
@@ -88,10 +100,18 @@ export function groupByModel(rows: ToolValueCatalogRow[]): ToolGroup[] {
         tool_name: row.tool_name,
         category: row.category,
         item_kind: row.item_kind,
+        image_url: row.image_url,
+        image_alt: row.image_alt,
+        image_source_url: row.image_source_url,
         rows: {},
       };
       byId.set(row.model_id, group);
     }
+    // Image metadata describes the model. If channel rows ever disagree, keep
+    // the first non-null value rather than dropping the image.
+    group.image_url ??= row.image_url;
+    group.image_alt ??= row.image_alt;
+    group.image_source_url ??= row.image_source_url;
     group.rows[row.sales_channel] = row;
   }
   return [...byId.values()].sort(
