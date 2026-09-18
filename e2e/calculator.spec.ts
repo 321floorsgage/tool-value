@@ -76,3 +76,44 @@ test("unsupported model gets no estimate", async ({ page }) => {
   await expect(page.getByText("We don't have enough verified data for this model yet.")).toBeVisible();
   await expect(page.getByTestId("verdict")).toHaveCount(0);
 });
+
+test("selected model shows one product image that survives a channel switch", async ({ page }) => {
+  // Serve a stub for the third-party image so the assertion is about the app,
+  // not about a remote CDN being reachable from wherever this runs.
+  const png = Buffer.from(
+    "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8z8DwHwAFAAH/q842iQAAAABJRU5ErkJggg==",
+    "base64",
+  );
+  await page.route("**/*.{png,jpg,jpeg,webp,avif,gif}", (route) =>
+    route.fulfill({ status: 200, contentType: "image/png", body: png }),
+  );
+  await page.route(/milwaukeetool\.com\/--\/web-images/, (route) =>
+    route.fulfill({ status: 200, contentType: "image/png", body: png }),
+  );
+
+  await page.goto("/?model=2904-20&price=35");
+  const img = page.getByTestId("product-image-img");
+  await expect(img).toBeVisible({ timeout: 15_000 });
+  await expect(page.getByTestId("product-image")).toHaveCount(1);
+  const before = await img.getAttribute("src");
+  expect(before).toMatch(/^https:\/\//);
+
+  await page.getByText("eBay", { exact: true }).first().click();
+  await expect(page.getByTestId("max-buy")).toHaveText("$20");
+  await expect(img).toHaveAttribute("src", before ?? "");
+  await expect(page.getByTestId("product-image")).toHaveCount(1);
+
+  // The image sits inside its container at any width.
+  const box = await img.boundingBox();
+  expect(box?.width ?? 0).toBeLessThanOrEqual(page.viewportSize()?.width ?? 0);
+});
+
+test("a failing image falls back without disturbing the valuation", async ({ page }) => {
+  await page.route("**/*.{png,jpg,jpeg,webp,avif,gif}", (route) => route.abort());
+  await page.goto("/?model=2904-20&price=35");
+  await expect(page.getByTestId("product-image-placeholder")).toBeVisible({ timeout: 15_000 });
+  await expect(page.getByTestId("verdict")).toHaveText("Good buy");
+  await expect(page.getByTestId("max-buy")).toHaveText("$40");
+  const overflow = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
+  expect(overflow).toBeLessThanOrEqual(0);
+});

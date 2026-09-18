@@ -1,6 +1,6 @@
 {
   "description": "Read-only snapshot of public.tool_value_catalog used ONLY by the Claude Artifact preview build (Artifact pages cannot reach Supabase). The Netlify app never imports this file. Regenerate with `npm run snapshot`.",
-  "captured_at": "2026-09-17T13:10:00Z",
+  "captured_at": "2026-09-17T14:05:00Z",
   "captured_as_role": "anon",
   "row_count": 48,
   "rows": [
@@ -27,6 +27,9 @@
       "confidence_score": 7,
       "confidence_label": "medium",
       "planning_note": "Bundle candidate: not viable alone at the $40 profit target.",
+      "image_url": "https://cdn11.bigcommerce.com/s-7dbrlj0ox8/images/stencil/500x659/products/52614/108769/Ecomm_Small-DCB115_5__35033.1736438181.jpg?c=1",
+      "image_alt": "DEWALT DCB115 \u2014 12V MAX and 20V MAX Lithium-Ion Charger",
+      "image_source_url": "https://federatedtool.com/dewalt-dcb115-12v-20v-max-li-ion-battery-charger/",
       "valuation_run_id": 2,
       "calculated_at": "2026-09-17T02:37:32.648184+00:00",
       "refreshed_at": "2026-09-17T02:51:55.067444+00:00"
@@ -54,6 +57,9 @@
       "confidence_score": 4,
       "confidence_label": "low",
       "planning_note": "Bundle candidate: not viable alone at the $40 profit target.",
+      "image_url": "https://cdn11.bigcommerce.com/s-7dbrlj0ox8/images/stencil/500x659/products/52614/108769/Ecomm_Small-DCB115_5__35033.1736438181.jpg?c=1",
+      "image_alt": "DEWALT DCB115 \u2014 12V MAX and 20V MAX Lithium-Ion Charger",
+      "image_source_url": "https://federatedtool.com/dewalt-dcb115-12v-20v-max-li-ion-battery-charger/",
       "valuation_run_id": 2,
       "calculated_at": "2026-09-17T02:37:32.648184+00:00",
       "refreshed_at": "2026-09-17T02:51:55.067444+00:00"
@@ -81,6 +87,9 @@
       "confidence_score": 7,
       "confidence_label": "medium",
       "planning_note": "Bundle candidate: not viable alone at the $40 profit target.",
+      "image_url": "https://cdn11.bigcommerce.com/s-7dbrlj0ox8/images/stencil/500x659/products/68765/110162/Ecomm_Large-DCB205_1__91077.1738764518.jpg?c=1",
+      "image_alt": "DEWALT DCB205 \u2014 20V MAX XR 5Ah Battery",
+      "image_source_url": "https://federatedtool.com/dewalt-dcb205-20v-max-premium-lithium-ion-battery-pack-5-0-ah/",
       "valuation_run_id": 2,
       "calculated_at": "2026-09-17T02:37:32.648184+00:00",
       "refreshed_at": "2026-09-17T02:51:55.067444+00:00"
@@ -108,6 +117,9 @@
       "confidence_score": 4,
       "confidence_label": "low",
       "planning_note": "Bundle candidate: not viable alone at the $40 profit target.",
+      "image_url": "https://cdn11.bigcommerce.com/s-7dbrlj0ox8/images/stencil/500x659/products/68765/110162/Ecomm_Large-DCB205_1__91077.1738764518.jpg?c=1",
+      "image_alt": "DEWALT DCB205 \u2014 20V MAX XR 5Ah Battery",
+      "image_source_url": "https://federatedtool.com/dewalt-dcb205-20v-max-premium-lithium-ion-battery-pack-5-0-ah/",
       "valuation_run_id": 2,
       "calculated_at": "2026-09-17T02:37:32.648184+00:00",
       "refreshed_at": "2026-09-17T02:51:55.067444+00:00"
@@ -135,6 +147,9 @@
       "confidence_score": 7,
       "confidence_label": "medium",
       "planning_note": "Base eBay fee estimate excludes promoted listings and account-specific fee variations.",
+      "image_url": "https://cdn11.bigcommerce.com/s-7dbrlj0ox8/images/stencil/500x659/products/60672/111443/Ecomm_Large-DCD999B_2__81388.1738959144.jpg?c=1",
+      "image_alt": "DEWALT DCD999B \u2014 20V MAX XR FLEXVOLT Advantage 1/2 in. Hammer Drill/Driver",
+      "image_source_url": "https://federatedtool.com/dewalt-dcd999b-20v-max-1-2-in-brushless-cordless-hammer-drill-driver-with-flexvolt-advantage-tool-only/",
       "valuation_run_id": 2,
       "calculated_at": "2026-09-17T02:37:32.648184+00:00",
       "refreshed_at": "2026-09-17T02:51:55.067444+00:00"
@@ -162,6 +177,9 @@
       "confidence_score": 4,
       "confidence_label": "low",
       "planning_note": "Local estimate is an eBay item-price proxy until direct local sold data is collected.",
+      "image_url": "https://cdn11.bigcommerce.com/s-7dbrlj0ox8/images/stencil/500x659/products/60672/111443/Ecomm_Large-DCD999B_2__81388.1738959144.jpg?c=1",
+      "image_alt": "DEWALT DCD999B \u2014 20V MAX XR FLEXVOLT Advantage 1/2 in. Hammer Drill/Driver",
+      "image_source_url": "https://federatedtool.com/dewalt-dcd999b-20v-max-1-2-in-brushless-cordless-hammer-drill-driver-with-flexvolt-advantage-tool-only/",
       "valuation_run_id": 2,
       "calculated_at": "2026-09-17T02:37:32.648184+00:00",
       "refreshed_at": "2026-09-17T02:51:55.067444+00:00"
@@ -189,6 +207,9 @@
       "confidence_score": 7,
       "confidence_label": "medium",
       "planning_note": "Bundle candidate: not viable alone at the $40 profit target.",
+      "image_url": "https://cdn11.bigcommerce.com/s-7dbrlj0ox8/images/stencil/500x659/products/52619/123296/DCF887B__84114.1738947809.jpg?c=1",
+      "image_alt": "DEWALT DCF887B \u2014 20V MAX XR 1/4 in. 3-Speed Impact Driver",
+      "image_source_url": "https://federatedtool.com/dewalt-dcf887b-20v-max-xr-3-speed-1-4-impact-driver-tool-only/",
       "valuation_run_id": 2,
       "calculated_at": "2026-09-17T02:37:32.648184+00:00",
       "refreshed_at": "2026-09-17T02:51:55.067444+00:00"
@@ -216,6 +237,9 @@
       "confidence_score": 4,
       "confidence_label": "low",
       "planning_note": "Bundle candidate: not viable alone at the $40 profit target.",
+      "image_url": "https://cdn11.bigcommerce.com/s-7dbrlj0ox8/images/stencil/500x659/products/52619/123296/DCF887B__84114.1738947809.jpg?c=1",
+      "image_alt": "DEWALT DCF887B \u2014 20V MAX XR 1/4 in. 3-Speed Impact Driver",
+      "image_source_url": "https://federatedtool.com/dewalt-dcf887b-20v-max-xr-3-speed-1-4-impact-driver-tool-only/",
       "valuation_run_id": 2,
       "calculated_at": "2026-09-17T02:37:32.648184+00:00",
       "refreshed_at": "2026-09-17T02:51:55.067444+00:00"
@@ -243,6 +267,9 @@
       "confidence_score": 6.5,
       "confidence_label": "medium",
       "planning_note": "Base eBay fee estimate excludes promoted listings and account-specific fee variations.",
+      "image_url": "https://cdn11.bigcommerce.com/s-7dbrlj0ox8/images/stencil/500x659/products/53155/112900/Ecomm_Large-DCG413B_1__45672.1738693741.jpg?c=1",
+      "image_alt": "DEWALT DCG413B \u2014 20V MAX XR Brushless 4-1/2 in. / 5 in. Grinder",
+      "image_source_url": "https://federatedtool.com/dewalt-dcg413b-20v-max-xr-4-1-2-grinder-w-brake-tool-only/",
       "valuation_run_id": 2,
       "calculated_at": "2026-09-17T02:37:32.648184+00:00",
       "refreshed_at": "2026-09-17T02:51:55.067444+00:00"
@@ -270,6 +297,9 @@
       "confidence_score": 4,
       "confidence_label": "low",
       "planning_note": "Local estimate is an eBay item-price proxy until direct local sold data is collected.",
+      "image_url": "https://cdn11.bigcommerce.com/s-7dbrlj0ox8/images/stencil/500x659/products/53155/112900/Ecomm_Large-DCG413B_1__45672.1738693741.jpg?c=1",
+      "image_alt": "DEWALT DCG413B \u2014 20V MAX XR Brushless 4-1/2 in. / 5 in. Grinder",
+      "image_source_url": "https://federatedtool.com/dewalt-dcg413b-20v-max-xr-4-1-2-grinder-w-brake-tool-only/",
       "valuation_run_id": 2,
       "calculated_at": "2026-09-17T02:37:32.648184+00:00",
       "refreshed_at": "2026-09-17T02:51:55.067444+00:00"
@@ -297,6 +327,9 @@
       "confidence_score": 7,
       "confidence_label": "medium",
       "planning_note": "Base eBay fee estimate excludes promoted listings and account-specific fee variations.",
+      "image_url": "https://cdn11.bigcommerce.com/s-7dbrlj0ox8/images/stencil/500x659/products/52869/114390/Ecomm_Large-DCN680B_1__24958.1738694501.jpg?c=1",
+      "image_alt": "DEWALT DCN680B \u2014 20V MAX XR 18 Gauge Brad Nailer",
+      "image_source_url": "https://federatedtool.com/dewalt-dcn680b-20v-max-xr-18-gauge-brad-nailer-tool-only/",
       "valuation_run_id": 2,
       "calculated_at": "2026-09-17T02:37:32.648184+00:00",
       "refreshed_at": "2026-09-17T02:51:55.067444+00:00"
@@ -324,6 +357,9 @@
       "confidence_score": 4,
       "confidence_label": "low",
       "planning_note": "Local estimate is an eBay item-price proxy until direct local sold data is collected.",
+      "image_url": "https://cdn11.bigcommerce.com/s-7dbrlj0ox8/images/stencil/500x659/products/52869/114390/Ecomm_Large-DCN680B_1__24958.1738694501.jpg?c=1",
+      "image_alt": "DEWALT DCN680B \u2014 20V MAX XR 18 Gauge Brad Nailer",
+      "image_source_url": "https://federatedtool.com/dewalt-dcn680b-20v-max-xr-18-gauge-brad-nailer-tool-only/",
       "valuation_run_id": 2,
       "calculated_at": "2026-09-17T02:37:32.648184+00:00",
       "refreshed_at": "2026-09-17T02:51:55.067444+00:00"
@@ -351,6 +387,9 @@
       "confidence_score": 7,
       "confidence_label": "medium",
       "planning_note": "Bundle candidate: not viable alone at the $40 profit target.",
+      "image_url": "https://cdn11.bigcommerce.com/s-7dbrlj0ox8/images/stencil/500x659/products/66907/114930/Ecomm_Large-DCS356B_1__53487.1777305358.jpg?c=1",
+      "image_alt": "DEWALT DCS356B \u2014 20V MAX XR 3-Speed Oscillating Multi-Tool",
+      "image_source_url": "https://federatedtool.com/dewalt-dcs356b-20v-max-xr-oscillating-multi-tool-tool-only/",
       "valuation_run_id": 2,
       "calculated_at": "2026-09-17T02:37:32.648184+00:00",
       "refreshed_at": "2026-09-17T02:51:55.067444+00:00"
@@ -378,6 +417,9 @@
       "confidence_score": 4,
       "confidence_label": "low",
       "planning_note": "Local estimate is an eBay item-price proxy until direct local sold data is collected.",
+      "image_url": "https://cdn11.bigcommerce.com/s-7dbrlj0ox8/images/stencil/500x659/products/66907/114930/Ecomm_Large-DCS356B_1__53487.1777305358.jpg?c=1",
+      "image_alt": "DEWALT DCS356B \u2014 20V MAX XR 3-Speed Oscillating Multi-Tool",
+      "image_source_url": "https://federatedtool.com/dewalt-dcs356b-20v-max-xr-oscillating-multi-tool-tool-only/",
       "valuation_run_id": 2,
       "calculated_at": "2026-09-17T02:37:32.648184+00:00",
       "refreshed_at": "2026-09-17T02:51:55.067444+00:00"
@@ -405,6 +447,9 @@
       "confidence_score": 7,
       "confidence_label": "medium",
       "planning_note": "Base eBay fee estimate excludes promoted listings and account-specific fee variations.",
+      "image_url": "https://cdn11.bigcommerce.com/s-7dbrlj0ox8/images/stencil/500x659/products/70559/115005/Ecomm_Large-DCS367B_1__35881.1738694817.jpg?c=1",
+      "image_alt": "DEWALT DCS367B \u2014 20V MAX XR Compact Reciprocating Saw",
+      "image_source_url": "https://federatedtool.com/dewalt-20v-max-xr-brushless-compact-reciprocating-saw-tool-only-dcs367b/",
       "valuation_run_id": 2,
       "calculated_at": "2026-09-17T02:37:32.648184+00:00",
       "refreshed_at": "2026-09-17T02:51:55.067444+00:00"
@@ -432,6 +477,9 @@
       "confidence_score": 4,
       "confidence_label": "low",
       "planning_note": "Local estimate is an eBay item-price proxy until direct local sold data is collected.",
+      "image_url": "https://cdn11.bigcommerce.com/s-7dbrlj0ox8/images/stencil/500x659/products/70559/115005/Ecomm_Large-DCS367B_1__35881.1738694817.jpg?c=1",
+      "image_alt": "DEWALT DCS367B \u2014 20V MAX XR Compact Reciprocating Saw",
+      "image_source_url": "https://federatedtool.com/dewalt-20v-max-xr-brushless-compact-reciprocating-saw-tool-only-dcs367b/",
       "valuation_run_id": 2,
       "calculated_at": "2026-09-17T02:37:32.648184+00:00",
       "refreshed_at": "2026-09-17T02:51:55.067444+00:00"
@@ -459,6 +507,9 @@
       "confidence_score": 7,
       "confidence_label": "medium",
       "planning_note": "Base eBay fee estimate excludes promoted listings and account-specific fee variations.",
+      "image_url": "https://cdn11.bigcommerce.com/s-7dbrlj0ox8/images/stencil/500x659/products/60317/115276/Ecomm_Large-DCS382B_1__71915.1738694957.jpg?c=1",
+      "image_alt": "DEWALT DCS382B \u2014 20V MAX XR Brushless Reciprocating Saw",
+      "image_source_url": "https://federatedtool.com/dewalt-dcs382b-20v-max-xr-reciprocating-saw-tool-only/",
       "valuation_run_id": 2,
       "calculated_at": "2026-09-17T02:37:32.648184+00:00",
       "refreshed_at": "2026-09-17T02:51:55.067444+00:00"
@@ -486,6 +537,9 @@
       "confidence_score": 4,
       "confidence_label": "low",
       "planning_note": "Local estimate is an eBay item-price proxy until direct local sold data is collected.",
+      "image_url": "https://cdn11.bigcommerce.com/s-7dbrlj0ox8/images/stencil/500x659/products/60317/115276/Ecomm_Large-DCS382B_1__71915.1738694957.jpg?c=1",
+      "image_alt": "DEWALT DCS382B \u2014 20V MAX XR Brushless Reciprocating Saw",
+      "image_source_url": "https://federatedtool.com/dewalt-dcs382b-20v-max-xr-reciprocating-saw-tool-only/",
       "valuation_run_id": 2,
       "calculated_at": "2026-09-17T02:37:32.648184+00:00",
       "refreshed_at": "2026-09-17T02:51:55.067444+00:00"
@@ -513,6 +567,9 @@
       "confidence_score": 6.5,
       "confidence_label": "medium",
       "planning_note": "Base eBay fee estimate excludes promoted listings and account-specific fee variations.",
+      "image_url": "https://cdn11.bigcommerce.com/s-7dbrlj0ox8/images/stencil/500x659/products/53710/115514/Ecomm_Large-DCS570B_1__72621.1738695078.jpg?c=1",
+      "image_alt": "DEWALT DCS570B \u2014 20V MAX XR 7-1/4 in. Circular Saw",
+      "image_source_url": "https://federatedtool.com/dewalt-dcs570b-20v-max-xr-7-1-4-circular-saw-tool-only/",
       "valuation_run_id": 2,
       "calculated_at": "2026-09-17T02:37:32.648184+00:00",
       "refreshed_at": "2026-09-17T02:51:55.067444+00:00"
@@ -540,6 +597,9 @@
       "confidence_score": 4,
       "confidence_label": "low",
       "planning_note": "Local estimate is an eBay item-price proxy until direct local sold data is collected.",
+      "image_url": "https://cdn11.bigcommerce.com/s-7dbrlj0ox8/images/stencil/500x659/products/53710/115514/Ecomm_Large-DCS570B_1__72621.1738695078.jpg?c=1",
+      "image_alt": "DEWALT DCS570B \u2014 20V MAX XR 7-1/4 in. Circular Saw",
+      "image_source_url": "https://federatedtool.com/dewalt-dcs570b-20v-max-xr-7-1-4-circular-saw-tool-only/",
       "valuation_run_id": 2,
       "calculated_at": "2026-09-17T02:37:32.648184+00:00",
       "refreshed_at": "2026-09-17T02:51:55.067444+00:00"
@@ -567,6 +627,9 @@
       "confidence_score": 7,
       "confidence_label": "medium",
       "planning_note": "Base eBay fee estimate excludes promoted listings and account-specific fee variations.",
+      "image_url": "https://cdn11.bigcommerce.com/s-7dbrlj0ox8/images/stencil/500x659/products/61291/115667/Ecomm_Large-DCS578B_1__28872.1738695149.jpg?c=1",
+      "image_alt": "DEWALT DCS578B \u2014 FLEXVOLT 60V MAX 7-1/4 in. Circular Saw",
+      "image_source_url": "https://federatedtool.com/dewalt-dcs578b-60v-max-flexvolt-7-1-4-circular-saw-tool-only/",
       "valuation_run_id": 2,
       "calculated_at": "2026-09-17T02:37:32.648184+00:00",
       "refreshed_at": "2026-09-17T02:51:55.067444+00:00"
@@ -594,6 +657,9 @@
       "confidence_score": 4,
       "confidence_label": "low",
       "planning_note": "Local estimate is an eBay item-price proxy until direct local sold data is collected.",
+      "image_url": "https://cdn11.bigcommerce.com/s-7dbrlj0ox8/images/stencil/500x659/products/61291/115667/Ecomm_Large-DCS578B_1__28872.1738695149.jpg?c=1",
+      "image_alt": "DEWALT DCS578B \u2014 FLEXVOLT 60V MAX 7-1/4 in. Circular Saw",
+      "image_source_url": "https://federatedtool.com/dewalt-dcs578b-60v-max-flexvolt-7-1-4-circular-saw-tool-only/",
       "valuation_run_id": 2,
       "calculated_at": "2026-09-17T02:37:32.648184+00:00",
       "refreshed_at": "2026-09-17T02:51:55.067444+00:00"
@@ -621,6 +687,9 @@
       "confidence_score": 7,
       "confidence_label": "medium",
       "planning_note": "Base eBay fee estimate excludes promoted listings and account-specific fee variations.",
+      "image_url": "https://www.milwaukeetool.com/--/web-images/sc/84861d98ab03461198faa70f87aae27d?hash=8fc9d913669175270b0255e3f93da02d&lang=en&w=800&h=800",
+      "image_alt": "Milwaukee Tool 2526-20 \u2014 M12 FUEL Oscillating Multi-Tool",
+      "image_source_url": "https://www.milwaukeetool.com/products/details/m12-fuel-oscillating-multi-tool/2526-20",
       "valuation_run_id": 2,
       "calculated_at": "2026-09-17T02:37:32.648184+00:00",
       "refreshed_at": "2026-09-17T02:51:55.067444+00:00"
@@ -648,6 +717,9 @@
       "confidence_score": 4,
       "confidence_label": "low",
       "planning_note": "Local estimate is an eBay item-price proxy until direct local sold data is collected.",
+      "image_url": "https://www.milwaukeetool.com/--/web-images/sc/84861d98ab03461198faa70f87aae27d?hash=8fc9d913669175270b0255e3f93da02d&lang=en&w=800&h=800",
+      "image_alt": "Milwaukee Tool 2526-20 \u2014 M12 FUEL Oscillating Multi-Tool",
+      "image_source_url": "https://www.milwaukeetool.com/products/details/m12-fuel-oscillating-multi-tool/2526-20",
       "valuation_run_id": 2,
       "calculated_at": "2026-09-17T02:37:32.648184+00:00",
       "refreshed_at": "2026-09-17T02:51:55.067444+00:00"
@@ -675,6 +747,9 @@
       "confidence_score": 7,
       "confidence_label": "medium",
       "planning_note": "Base eBay fee estimate excludes promoted listings and account-specific fee variations.",
+      "image_url": "https://www.milwaukeetool.com/--/web-images/sc/9449a97a93bb468fa095399122185e6c?hash=9e0537ebf091fad38fcb0bf06a812784&lang=en&w=800&h=800",
+      "image_alt": "Milwaukee Tool 2732-20 \u2014 M18 FUEL 7-1/4 in. Circular Saw",
+      "image_source_url": "https://www.milwaukeetool.com/products/details/m18-fuel-7-1-4-circular-saw-tool-only/2732-20",
       "valuation_run_id": 2,
       "calculated_at": "2026-09-17T02:37:32.648184+00:00",
       "refreshed_at": "2026-09-17T02:51:55.067444+00:00"
@@ -702,6 +777,9 @@
       "confidence_score": 4,
       "confidence_label": "low",
       "planning_note": "Local estimate is an eBay item-price proxy until direct local sold data is collected.",
+      "image_url": "https://www.milwaukeetool.com/--/web-images/sc/9449a97a93bb468fa095399122185e6c?hash=9e0537ebf091fad38fcb0bf06a812784&lang=en&w=800&h=800",
+      "image_alt": "Milwaukee Tool 2732-20 \u2014 M18 FUEL 7-1/4 in. Circular Saw",
+      "image_source_url": "https://www.milwaukeetool.com/products/details/m18-fuel-7-1-4-circular-saw-tool-only/2732-20",
       "valuation_run_id": 2,
       "calculated_at": "2026-09-17T02:37:32.648184+00:00",
       "refreshed_at": "2026-09-17T02:51:55.067444+00:00"
@@ -729,6 +807,9 @@
       "confidence_score": 7,
       "confidence_label": "medium",
       "planning_note": "Base eBay fee estimate excludes promoted listings and account-specific fee variations.",
+      "image_url": "https://www.milwaukeetool.com/--/web-images/sc/0363bc92b776412bab8e439295821cd6?hash=e335d471ff330df7a1ba811049b6621e&lang=en&w=800&h=800",
+      "image_alt": "Milwaukee Tool 2746-20 \u2014 M18 FUEL 18 Gauge Brad Nailer",
+      "image_source_url": "https://www.milwaukeetool.com/products/details/m18-fuel-18-gauge-brad-nailer/2746-20",
       "valuation_run_id": 2,
       "calculated_at": "2026-09-17T02:37:32.648184+00:00",
       "refreshed_at": "2026-09-17T02:51:55.067444+00:00"
@@ -756,6 +837,9 @@
       "confidence_score": 4,
       "confidence_label": "low",
       "planning_note": "Local estimate is an eBay item-price proxy until direct local sold data is collected.",
+      "image_url": "https://www.milwaukeetool.com/--/web-images/sc/0363bc92b776412bab8e439295821cd6?hash=e335d471ff330df7a1ba811049b6621e&lang=en&w=800&h=800",
+      "image_alt": "Milwaukee Tool 2746-20 \u2014 M18 FUEL 18 Gauge Brad Nailer",
+      "image_source_url": "https://www.milwaukeetool.com/products/details/m18-fuel-18-gauge-brad-nailer/2746-20",
       "valuation_run_id": 2,
       "calculated_at": "2026-09-17T02:37:32.648184+00:00",
       "refreshed_at": "2026-09-17T02:51:55.067444+00:00"
@@ -783,6 +867,9 @@
       "confidence_score": 7,
       "confidence_label": "medium",
       "planning_note": "Base eBay fee estimate excludes promoted listings and account-specific fee variations.",
+      "image_url": "https://www.milwaukeetool.com/--/web-images/sc/58942cf42cfc4e5c8a30aac8bec76e72?hash=bdb0248ce22fbf8b4e81b2cc3329d11f&lang=en&w=800&h=800",
+      "image_alt": "Milwaukee Tool 2821-20 \u2014 M18 FUEL SAWZALL Reciprocating Saw",
+      "image_source_url": "https://www.milwaukeetool.com/products/details/m18-fuel-sawzall-recip-saw/2821-20",
       "valuation_run_id": 2,
       "calculated_at": "2026-09-17T02:37:32.648184+00:00",
       "refreshed_at": "2026-09-17T02:51:55.067444+00:00"
@@ -810,6 +897,9 @@
       "confidence_score": 4,
       "confidence_label": "low",
       "planning_note": "Local estimate is an eBay item-price proxy until direct local sold data is collected.",
+      "image_url": "https://www.milwaukeetool.com/--/web-images/sc/58942cf42cfc4e5c8a30aac8bec76e72?hash=bdb0248ce22fbf8b4e81b2cc3329d11f&lang=en&w=800&h=800",
+      "image_alt": "Milwaukee Tool 2821-20 \u2014 M18 FUEL SAWZALL Reciprocating Saw",
+      "image_source_url": "https://www.milwaukeetool.com/products/details/m18-fuel-sawzall-recip-saw/2821-20",
       "valuation_run_id": 2,
       "calculated_at": "2026-09-17T02:37:32.648184+00:00",
       "refreshed_at": "2026-09-17T02:51:55.067444+00:00"
@@ -837,6 +927,9 @@
       "confidence_score": 7,
       "confidence_label": "medium",
       "planning_note": "Base eBay fee estimate excludes promoted listings and account-specific fee variations.",
+      "image_url": "https://www.milwaukeetool.com/--/web-images/sc/665fab038ca0416da0d97a91a3af5f4d?hash=35e9e10f93d6e7828233bc461a7e7dc0&lang=en&w=800&h=800",
+      "image_alt": "Milwaukee Tool 2830-20 \u2014 M18 FUEL Rear Handle 7-1/4 in. Circular Saw",
+      "image_source_url": "https://www.milwaukeetool.com/products/details/m18-fuel-rear-handle-7-1-4-circular-saw-tool-only/2830-20",
       "valuation_run_id": 2,
       "calculated_at": "2026-09-17T02:37:32.648184+00:00",
       "refreshed_at": "2026-09-17T02:51:55.067444+00:00"
@@ -864,6 +957,9 @@
       "confidence_score": 4,
       "confidence_label": "low",
       "planning_note": "Local estimate is an eBay item-price proxy until direct local sold data is collected.",
+      "image_url": "https://www.milwaukeetool.com/--/web-images/sc/665fab038ca0416da0d97a91a3af5f4d?hash=35e9e10f93d6e7828233bc461a7e7dc0&lang=en&w=800&h=800",
+      "image_alt": "Milwaukee Tool 2830-20 \u2014 M18 FUEL Rear Handle 7-1/4 in. Circular Saw",
+      "image_source_url": "https://www.milwaukeetool.com/products/details/m18-fuel-rear-handle-7-1-4-circular-saw-tool-only/2830-20",
       "valuation_run_id": 2,
       "calculated_at": "2026-09-17T02:37:32.648184+00:00",
       "refreshed_at": "2026-09-17T02:51:55.067444+00:00"
@@ -891,6 +987,9 @@
       "confidence_score": 7,
       "confidence_label": "medium",
       "planning_note": "Base eBay fee estimate excludes promoted listings and account-specific fee variations.",
+      "image_url": "https://www.milwaukeetool.com/--/web-images/sc/1843b114f9134cd682feb767dc661ba8?hash=e548e89d8d4cb432e38399464d07322d&lang=en&w=800&h=800",
+      "image_alt": "Milwaukee Tool 2836-20 \u2014 M18 FUEL Oscillating Multi-Tool",
+      "image_source_url": "https://www.milwaukeetool.com/products/details/m18-fuel-oscillating-multi-tool/2836-20",
       "valuation_run_id": 2,
       "calculated_at": "2026-09-17T02:37:32.648184+00:00",
       "refreshed_at": "2026-09-17T02:51:55.067444+00:00"
@@ -918,6 +1017,9 @@
       "confidence_score": 4,
       "confidence_label": "low",
       "planning_note": "Local estimate is an eBay item-price proxy until direct local sold data is collected.",
+      "image_url": "https://www.milwaukeetool.com/--/web-images/sc/1843b114f9134cd682feb767dc661ba8?hash=e548e89d8d4cb432e38399464d07322d&lang=en&w=800&h=800",
+      "image_alt": "Milwaukee Tool 2836-20 \u2014 M18 FUEL Oscillating Multi-Tool",
+      "image_source_url": "https://www.milwaukeetool.com/products/details/m18-fuel-oscillating-multi-tool/2836-20",
       "valuation_run_id": 2,
       "calculated_at": "2026-09-17T02:37:32.648184+00:00",
       "refreshed_at": "2026-09-17T02:51:55.067444+00:00"
@@ -945,6 +1047,9 @@
       "confidence_score": 7,
       "confidence_label": "medium",
       "planning_note": "Base eBay fee estimate excludes promoted listings and account-specific fee variations.",
+      "image_url": "https://www.milwaukeetool.com/--/web-images/sc/33ce3b34541045d8888322123f1cd84e?hash=0b332ad28bb5a631efeff25c633ff1e9&lang=en&w=800&h=800",
+      "image_alt": "Milwaukee Tool 2880-20 \u2014 M18 FUEL 4-1/2 in. / 5 in. Braking Grinder, Paddle Switch",
+      "image_source_url": "https://www.milwaukeetool.com/products/details/m18-fuel-4-1-2-5-braking-grinder-paddle-switch-no-lock/2880-20",
       "valuation_run_id": 2,
       "calculated_at": "2026-09-17T02:37:32.648184+00:00",
       "refreshed_at": "2026-09-17T02:51:55.067444+00:00"
@@ -972,6 +1077,9 @@
       "confidence_score": 4,
       "confidence_label": "low",
       "planning_note": "Local estimate is an eBay item-price proxy until direct local sold data is collected.",
+      "image_url": "https://www.milwaukeetool.com/--/web-images/sc/33ce3b34541045d8888322123f1cd84e?hash=0b332ad28bb5a631efeff25c633ff1e9&lang=en&w=800&h=800",
+      "image_alt": "Milwaukee Tool 2880-20 \u2014 M18 FUEL 4-1/2 in. / 5 in. Braking Grinder, Paddle Switch",
+      "image_source_url": "https://www.milwaukeetool.com/products/details/m18-fuel-4-1-2-5-braking-grinder-paddle-switch-no-lock/2880-20",
       "valuation_run_id": 2,
       "calculated_at": "2026-09-17T02:37:32.648184+00:00",
       "refreshed_at": "2026-09-17T02:51:55.067444+00:00"
@@ -999,6 +1107,9 @@
       "confidence_score": 7,
       "confidence_label": "medium",
       "planning_note": "Base eBay fee estimate excludes promoted listings and account-specific fee variations.",
+      "image_url": "https://www.milwaukeetool.com/--/web-images/sc/92189d4f48274ce79371584b87e05759?hash=8c18f40f97a0cf739200b816abc1c00e&lang=en&w=800&h=800",
+      "image_alt": "Milwaukee Tool 2904-20 \u2014 M18 FUEL 1/2 in. Hammer Drill/Driver",
+      "image_source_url": "https://www.milwaukeetool.com/products/details/m18-fuel-1-2-hammer-drill-driver-cordless-power-tool/2904-20",
       "valuation_run_id": 2,
       "calculated_at": "2026-09-17T02:37:32.648184+00:00",
       "refreshed_at": "2026-09-17T02:51:55.067444+00:00"
@@ -1026,6 +1137,9 @@
       "confidence_score": 4,
       "confidence_label": "low",
       "planning_note": "Local estimate is an eBay item-price proxy until direct local sold data is collected.",
+      "image_url": "https://www.milwaukeetool.com/--/web-images/sc/92189d4f48274ce79371584b87e05759?hash=8c18f40f97a0cf739200b816abc1c00e&lang=en&w=800&h=800",
+      "image_alt": "Milwaukee Tool 2904-20 \u2014 M18 FUEL 1/2 in. Hammer Drill/Driver",
+      "image_source_url": "https://www.milwaukeetool.com/products/details/m18-fuel-1-2-hammer-drill-driver-cordless-power-tool/2904-20",
       "valuation_run_id": 2,
       "calculated_at": "2026-09-17T02:37:32.648184+00:00",
       "refreshed_at": "2026-09-17T02:51:55.067444+00:00"
@@ -1053,6 +1167,9 @@
       "confidence_score": 7,
       "confidence_label": "medium",
       "planning_note": "Base eBay fee estimate excludes promoted listings and account-specific fee variations.",
+      "image_url": "https://www.milwaukeetool.com/--/web-images/sc/b90a6004a84c46bcae42e834c28c3661?hash=8089359443f3c62d1628ced031a2881c&lang=en&w=800&h=800",
+      "image_alt": "Milwaukee Tool 2953-20 \u2014 M18 FUEL 1/4 in. Hex Impact Driver",
+      "image_source_url": "https://www.milwaukeetool.com/products/details/m18-fuel-1-4-hex-impact-driver/2953-20",
       "valuation_run_id": 2,
       "calculated_at": "2026-09-17T02:37:32.648184+00:00",
       "refreshed_at": "2026-09-17T02:51:55.067444+00:00"
@@ -1080,6 +1197,9 @@
       "confidence_score": 4,
       "confidence_label": "low",
       "planning_note": "Local estimate is an eBay item-price proxy until direct local sold data is collected.",
+      "image_url": "https://www.milwaukeetool.com/--/web-images/sc/b90a6004a84c46bcae42e834c28c3661?hash=8089359443f3c62d1628ced031a2881c&lang=en&w=800&h=800",
+      "image_alt": "Milwaukee Tool 2953-20 \u2014 M18 FUEL 1/4 in. Hex Impact Driver",
+      "image_source_url": "https://www.milwaukeetool.com/products/details/m18-fuel-1-4-hex-impact-driver/2953-20",
       "valuation_run_id": 2,
       "calculated_at": "2026-09-17T02:37:32.648184+00:00",
       "refreshed_at": "2026-09-17T02:51:55.067444+00:00"
@@ -1107,6 +1227,9 @@
       "confidence_score": 7,
       "confidence_label": "medium",
       "planning_note": "Bundle candidate: not viable alone at the $40 profit target.",
+      "image_url": "https://www.milwaukeetool.com/--/web-images/sc/a02039f515964dce80b0346d077137b3?hash=1517d2ca3ea4d7bcf6db020bd3b709a6&lang=en&w=800&h=800",
+      "image_alt": "Milwaukee Tool 3404-20 \u2014 M12 FUEL 1/2 in. Hammer Drill/Driver",
+      "image_source_url": "https://www.milwaukeetool.com/products/details/m12-fuel-1-2-hammer-drill-driver/3404-20",
       "valuation_run_id": 2,
       "calculated_at": "2026-09-17T02:37:32.648184+00:00",
       "refreshed_at": "2026-09-17T02:51:55.067444+00:00"
@@ -1134,6 +1257,9 @@
       "confidence_score": 4,
       "confidence_label": "low",
       "planning_note": "Local estimate is an eBay item-price proxy until direct local sold data is collected.",
+      "image_url": "https://www.milwaukeetool.com/--/web-images/sc/a02039f515964dce80b0346d077137b3?hash=1517d2ca3ea4d7bcf6db020bd3b709a6&lang=en&w=800&h=800",
+      "image_alt": "Milwaukee Tool 3404-20 \u2014 M12 FUEL 1/2 in. Hammer Drill/Driver",
+      "image_source_url": "https://www.milwaukeetool.com/products/details/m12-fuel-1-2-hammer-drill-driver/3404-20",
       "valuation_run_id": 2,
       "calculated_at": "2026-09-17T02:37:32.648184+00:00",
       "refreshed_at": "2026-09-17T02:51:55.067444+00:00"
@@ -1161,6 +1287,9 @@
       "confidence_score": 7,
       "confidence_label": "medium",
       "planning_note": "Bundle candidate: not viable alone at the $40 profit target.",
+      "image_url": "https://www.milwaukeetool.com/--/web-images/sc/7c36fdbf2c1e46b08a098578a88d6176?hash=26e755310edf0503d6d49e27273946d1&lang=en&w=800&h=800",
+      "image_alt": "Milwaukee Tool 3453-20 \u2014 M12 FUEL 1/4 in. Hex Impact Driver",
+      "image_source_url": "https://www.milwaukeetool.com/products/details/m12-fuel-1-4-hex-impact-driver/3453-20",
       "valuation_run_id": 2,
       "calculated_at": "2026-09-17T02:37:32.648184+00:00",
       "refreshed_at": "2026-09-17T02:51:55.067444+00:00"
@@ -1188,6 +1317,9 @@
       "confidence_score": 4,
       "confidence_label": "low",
       "planning_note": "Local estimate is an eBay item-price proxy until direct local sold data is collected.",
+      "image_url": "https://www.milwaukeetool.com/--/web-images/sc/7c36fdbf2c1e46b08a098578a88d6176?hash=26e755310edf0503d6d49e27273946d1&lang=en&w=800&h=800",
+      "image_alt": "Milwaukee Tool 3453-20 \u2014 M12 FUEL 1/4 in. Hex Impact Driver",
+      "image_source_url": "https://www.milwaukeetool.com/products/details/m12-fuel-1-4-hex-impact-driver/3453-20",
       "valuation_run_id": 2,
       "calculated_at": "2026-09-17T02:37:32.648184+00:00",
       "refreshed_at": "2026-09-17T02:51:55.067444+00:00"
@@ -1215,6 +1347,9 @@
       "confidence_score": 7,
       "confidence_label": "medium",
       "planning_note": "Bundle candidate: not viable alone at the $40 profit target.",
+      "image_url": "https://www.milwaukeetool.com/--/web-images/sc/9fc5c9495d6546cfaa097927b8a1abf4?hash=22c3545702027dc02852c092ac08bc94&lang=en&w=800&h=800",
+      "image_alt": "Milwaukee Tool 48-11-1850 \u2014 M18 REDLITHIUM XC5.0 Extended Capacity Battery Pack",
+      "image_source_url": "https://www.milwaukeetool.com/products/details/m18-redlithium-xc5-0-extended-capacity-battery-pack/48-11-1850",
       "valuation_run_id": 2,
       "calculated_at": "2026-09-17T02:37:32.648184+00:00",
       "refreshed_at": "2026-09-17T02:51:55.067444+00:00"
@@ -1242,6 +1377,9 @@
       "confidence_score": 4,
       "confidence_label": "low",
       "planning_note": "Bundle candidate: not viable alone at the $40 profit target.",
+      "image_url": "https://www.milwaukeetool.com/--/web-images/sc/9fc5c9495d6546cfaa097927b8a1abf4?hash=22c3545702027dc02852c092ac08bc94&lang=en&w=800&h=800",
+      "image_alt": "Milwaukee Tool 48-11-1850 \u2014 M18 REDLITHIUM XC5.0 Extended Capacity Battery Pack",
+      "image_source_url": "https://www.milwaukeetool.com/products/details/m18-redlithium-xc5-0-extended-capacity-battery-pack/48-11-1850",
       "valuation_run_id": 2,
       "calculated_at": "2026-09-17T02:37:32.648184+00:00",
       "refreshed_at": "2026-09-17T02:51:55.067444+00:00"
@@ -1269,6 +1407,9 @@
       "confidence_score": 7,
       "confidence_label": "medium",
       "planning_note": "Bundle candidate: not viable alone at the $40 profit target.",
+      "image_url": "https://www.milwaukeetool.com/--/web-images/sc/1e0693ddc84641b0935228bb56efdecf?hash=596a6c8ba514a03139b3c5da79d36565&lang=en&w=800&h=800",
+      "image_alt": "Milwaukee Tool 48-59-1812 \u2014 M18 and M12 Multi-Voltage Charger",
+      "image_source_url": "https://www.milwaukeetool.com/products/details/m18-m12-multi-voltage-charger/48-59-1812",
       "valuation_run_id": 2,
       "calculated_at": "2026-09-17T02:37:32.648184+00:00",
       "refreshed_at": "2026-09-17T02:51:55.067444+00:00"
@@ -1296,6 +1437,9 @@
       "confidence_score": 4,
       "confidence_label": "low",
       "planning_note": "Bundle candidate: not viable alone at the $40 profit target.",
+      "image_url": "https://www.milwaukeetool.com/--/web-images/sc/1e0693ddc84641b0935228bb56efdecf?hash=596a6c8ba514a03139b3c5da79d36565&lang=en&w=800&h=800",
+      "image_alt": "Milwaukee Tool 48-59-1812 \u2014 M18 and M12 Multi-Voltage Charger",
+      "image_source_url": "https://www.milwaukeetool.com/products/details/m18-m12-multi-voltage-charger/48-59-1812",
       "valuation_run_id": 2,
       "calculated_at": "2026-09-17T02:37:32.648184+00:00",
       "refreshed_at": "2026-09-17T02:51:55.067444+00:00"

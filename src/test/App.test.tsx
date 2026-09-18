@@ -66,6 +66,50 @@ describe("App", () => {
     expect(screen.queryByText("Check before you pay")).not.toBeInTheDocument();
   });
 
+  it("shows the selected model's image and keeps it when switching channels", async () => {
+    load.mockResolvedValue(sampleRows);
+    const user = userEvent.setup();
+    render(<App />);
+    await pickTool(user, "2904", /2904-20/);
+
+    const img = screen.getByRole("img", { name: "Milwaukee Tool 2904-20 — M18 FUEL 1/2 in. Hammer Drill/Driver" });
+    expect(img).toHaveAttribute("src", "https://images.example.com/milwaukee-2904-20.jpg");
+    expect(screen.getByRole("link", { name: /View image source/ })).toHaveAttribute(
+      "href",
+      "https://example.com/products/2904-20",
+    );
+
+    await user.click(screen.getByRole("radio", { name: /eBay/ }));
+    expect(screen.getByTestId("product-image-img")).toHaveAttribute(
+      "src",
+      "https://images.example.com/milwaukee-2904-20.jpg",
+    );
+    expect(screen.getAllByTestId("product-image")).toHaveLength(1);
+  });
+
+  it("shows the placeholder for a model with no image, without blocking the verdict", async () => {
+    load.mockResolvedValue(sampleRows);
+    const user = userEvent.setup();
+    render(<App />);
+    await pickTool(user, "1850", /48-11-1850/);
+    expect(screen.getByTestId("product-image-placeholder")).toBeInTheDocument();
+    expect(screen.queryByTestId("product-image-img")).not.toBeInTheDocument();
+    expect(screen.getByTestId("verdict")).toHaveTextContent("Bundle or skip");
+  });
+
+  it("keeps the image when a direct URL loads a model", async () => {
+    window.history.replaceState(null, "", "/?model=DCN680B&channel=ebay&price=65");
+    vi.resetModules();
+    const { default: FreshApp } = await import("../App");
+    load.mockResolvedValue(sampleRows);
+    render(<FreshApp />);
+    expect(await screen.findByTestId("product-image-img")).toHaveAttribute(
+      "src",
+      "https://images.example.com/dewalt-dcn680b.jpg",
+    );
+    expect(screen.getByTestId("verdict")).toHaveTextContent("Good buy");
+  });
+
   it.each([
     ["20", "Great buy"],
     ["35", "Good buy"],

@@ -24,6 +24,9 @@ export const CATALOG_COLUMNS = `
     confidence_score,
     confidence_label,
     planning_note,
+    image_url,
+    image_alt,
+    image_source_url,
     valuation_run_id,
     calculated_at,
     refreshed_at

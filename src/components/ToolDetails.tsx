@@ -13,6 +13,7 @@ import { formatMoney, formatMoneyExact } from "../lib/format";
 import { shortBrand } from "../lib/catalog";
 import { VERDICT_TITLE } from "../lib/verdictCopy";
 import { Money } from "./Money";
+import { ProductImage } from "./ProductImage";
 
 interface ToolDetailsProps {
   group: ToolGroup;
@@ -26,16 +27,28 @@ export function ToolIdentity({ group }: { group: ToolGroup }) {
   const target = row?.target_profit ?? LOCKED_TARGET_PROFIT;
   return (
     <section aria-labelledby="tool-heading" className="border-b border-line pb-4">
-      <p className="text-muted">
-        {shortBrand(group.brand)}, {group.category}
-      </p>
-      <h2 id="tool-heading" className="font-display text-[2.25rem] font-extrabold leading-none tracking-tight">
-        {group.model_number}
-      </h2>
-      <p className="mt-1 text-lg leading-snug">{group.tool_name}</p>
-      <p className="mt-2 text-sm text-muted">
-        Priced for ordinary used condition, a {formatMoney(target)} profit target, and a sale within {SELLING_WINDOW}.
-      </p>
+      <div className="grid items-center gap-4 sm:grid-cols-[12rem_minmax(0,1fr)]">
+        <ProductImage
+          src={group.image_url}
+          alt={group.image_alt}
+          sourceUrl={group.image_source_url}
+          brand={group.brand}
+          modelNumber={group.model_number}
+        />
+        <div>
+          <p className="text-muted">
+            {shortBrand(group.brand)}, {group.category}
+          </p>
+          <h2 id="tool-heading" className="font-display text-[2.25rem] font-extrabold leading-none tracking-tight">
+            {group.model_number}
+          </h2>
+          <p className="mt-1 text-lg leading-snug">{group.tool_name}</p>
+          <p className="mt-2 text-sm text-muted">
+            Priced for ordinary used condition, a {formatMoney(target)} profit target, and a sale within{" "}
+            {SELLING_WINDOW}.
+          </p>
+        </div>
+      </div>
     </section>
   );
 }

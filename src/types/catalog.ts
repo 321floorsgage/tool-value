@@ -28,6 +28,9 @@ export interface ToolValueCatalogRow {
   confidence_score: number | null;
   confidence_label: ConfidenceLabel;
   planning_note: string | null;
+  image_url: string | null;
+  image_alt: string | null;
+  image_source_url: string | null;
   valuation_run_id: number;
   calculated_at: string;
   refreshed_at: string;
@@ -41,6 +44,10 @@ export interface ToolGroup {
   tool_name: string;
   category: string;
   item_kind: string;
+  /** Model-level, not channel-level: the same image for Local and eBay. */
+  image_url: string | null;
+  image_alt: string | null;
+  image_source_url: string | null;
   rows: Partial<Record<SalesChannel, ToolValueCatalogRow>>;
 }
 

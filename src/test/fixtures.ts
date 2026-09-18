@@ -35,6 +35,9 @@ export function makeRow(overrides: Partial<ToolValueCatalogRow>): ToolValueCatal
     confidence_score: 4,
     confidence_label: "low",
     planning_note: null,
+    image_url: "https://example.com/test-tool.jpg",
+    image_alt: "Test T-1 — Test Tool",
+    image_source_url: "https://example.com/test-tool",
     ...overrides,
   };
 }
@@ -57,6 +60,9 @@ export const milwaukee2904Local = makeRow({
   risk_buffer: 6.75,
   confidence_label: "low",
   planning_note: "Local estimate is an eBay item-price proxy until direct local sold data is collected.",
+  image_url: "https://images.example.com/milwaukee-2904-20.jpg",
+  image_alt: "Milwaukee Tool 2904-20 — M18 FUEL 1/2 in. Hammer Drill/Driver",
+  image_source_url: "https://example.com/products/2904-20",
 });
 
 export const milwaukee2904Ebay = makeRow({
@@ -83,6 +89,9 @@ export const dewaltDcn680Ebay = makeRow({
   tool_name: "20V MAX XR 18 Gauge Brad Nailer",
   category: "Nailers",
   sales_channel: "ebay",
+  image_url: "https://images.example.com/dewalt-dcn680b.jpg",
+  image_alt: "DEWALT DCN680B — 20V MAX XR 18 Gauge Brad Nailer",
+  image_source_url: "https://example.com/products/dcn680b",
   value_low: 132.67,
   expected_resale: 168.7,
   value_high: 201.75,
@@ -119,6 +128,9 @@ export const milwaukeeBatteryLocal = makeRow({
   category: "Batteries",
   item_kind: "battery",
   sales_channel: "local",
+  image_url: null,
+  image_alt: null,
+  image_source_url: null,
   value_low: 30,
   expected_resale: 30,
   value_high: 38.49,
