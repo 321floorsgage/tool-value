@@ -19,7 +19,7 @@ const supabase = createClient(url, key, { auth: { persistSession: false } });
 const { data, error } = await supabase
   .from("tool_value_catalog")
   .select(
-    "model_id,brand,model_number,tool_name,category,item_kind,sales_channel,condition_grade,value_low,expected_resale,value_high,fast_sale_price,maximum_recommended_buy,great_buy_price,estimated_fees,estimated_shipping,target_profit,risk_buffer,sold_sample_count,confidence_score,confidence_label,planning_note,valuation_run_id,calculated_at,refreshed_at",
+    "model_id,brand,model_number,tool_name,category,item_kind,sales_channel,condition_grade,value_low,expected_resale,value_high,fast_sale_price,maximum_recommended_buy,great_buy_price,estimated_fees,estimated_shipping,target_profit,risk_buffer,sold_sample_count,confidence_score,confidence_label,planning_note,image_url,image_alt,image_source_url,valuation_run_id,calculated_at,refreshed_at",
   )
   .order("brand")
   .order("model_number")
