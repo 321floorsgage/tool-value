@@ -16,6 +16,24 @@ describe("parseCatalogRows", () => {
     expect(row.sold_sample_count).toBe(12);
   });
 
+  it("accepts the image fields and rejects non-https URLs", () => {
+    const [row] = parseCatalogRows([
+      { ...milwaukee2904Local, image_url: "http://insecure.example.com/x.jpg", image_source_url: "javascript:alert(1)", image_alt: "  Padded alt  " },
+    ]);
+    expect(row.image_url).toBeNull();
+    expect(row.image_source_url).toBeNull();
+    expect(row.image_alt).toBe("Padded alt");
+
+    const [ok] = parseCatalogRows([milwaukee2904Local]);
+    expect(ok.image_url).toBe(milwaukee2904Local.image_url);
+    expect(ok.image_source_url).toBe(milwaukee2904Local.image_source_url);
+
+    const [empty] = parseCatalogRows([{ ...milwaukee2904Local, image_url: null, image_alt: "   ", image_source_url: undefined }]);
+    expect(empty.image_url).toBeNull();
+    expect(empty.image_alt).toBeNull();
+    expect(empty.image_source_url).toBeNull();
+  });
+
   it("drops rows with an unknown channel", () => {
     expect(parseCatalogRows([{ ...milwaukee2904Local, sales_channel: "amazon" }])).toEqual([]);
   });

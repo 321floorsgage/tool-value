@@ -19,6 +19,30 @@ describe("groupByModel", () => {
   });
 });
 
+describe("model image grouping", () => {
+  it("keeps one model image across both channel rows", () => {
+    const tool = groups.find((g) => g.model_number === "2904-20");
+    expect(tool?.image_url).toBe("https://images.example.com/milwaukee-2904-20.jpg");
+    expect(tool?.image_alt).toBe("Milwaukee Tool 2904-20 — M18 FUEL 1/2 in. Hammer Drill/Driver");
+    expect(tool?.image_source_url).toBe("https://example.com/products/2904-20");
+  });
+
+  it("keeps a null image null", () => {
+    expect(groups.find((g) => g.model_number === "48-11-1850")?.image_url).toBeNull();
+  });
+
+  it("recovers the image when only one channel row carries it", () => {
+    const [first, second] = groupByModel([
+      makeRow({ model_id: 77, model_number: "X-1", sales_channel: "local", image_url: null, image_alt: null, image_source_url: null }),
+      makeRow({ model_id: 77, model_number: "X-1", sales_channel: "ebay", image_url: "https://images.example.com/x1.jpg", image_alt: "X-1", image_source_url: "https://example.com/x1" }),
+    ]);
+    expect(second).toBeUndefined();
+    expect(first.image_url).toBe("https://images.example.com/x1.jpg");
+    expect(first.image_alt).toBe("X-1");
+    expect(first.image_source_url).toBe("https://example.com/x1");
+  });
+});
+
 describe("searchTools", () => {
   it("finds by exact model number, with or without punctuation", () => {
     expect(models("2904-20")[0]).toBe("2904-20");

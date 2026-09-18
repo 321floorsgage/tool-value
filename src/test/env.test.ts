@@ -41,8 +41,9 @@ describe("catalog query contract", () => {
   it("reads only tool_value_catalog with the contract columns", () => {
     expect(CATALOG_TABLE).toBe("tool_value_catalog");
     const cols = CATALOG_COLUMNS.split(",").map((c) => c.trim());
-    expect(cols).toHaveLength(25);
+    expect(cols).toHaveLength(28);
     expect(cols).toContain("maximum_recommended_buy");
+    expect(cols).toEqual(expect.arrayContaining(["image_url", "image_alt", "image_source_url"]));
     expect(cols).not.toContain("*");
   });
 });
