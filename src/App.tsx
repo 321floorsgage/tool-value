@@ -1,9 +1,9 @@
-import { useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import type { SalesChannel, ToolGroup } from "./types/catalog";
 import { configResult } from "@catalog-source";
 import { groupByModel, latestRefresh, selectionLabel } from "./lib/catalog";
 import { parseAskingPrice } from "./lib/price";
-import { readUrlState, writeUrlState } from "./lib/urlState";
+import { readUrlState, writeUrlState, type AppMode } from "./lib/urlState";
 import { useCatalog } from "./lib/useCatalog";
 import { UNSUPPORTED_MESSAGE } from "./lib/constants";
 import { Header } from "./components/Header";
@@ -17,6 +17,7 @@ import { ChannelComparison, ResaleRange, ToolIdentity } from "./components/ToolD
 import { EvidencePanel } from "./components/EvidencePanel";
 import { Disclaimer } from "./components/Disclaimer";
 import { ConfigErrorScreen, DataErrorState, LoadingState } from "./components/StatusStates";
+import { ScanTool } from "./components/scan/ScanTool";
 import { canGiveVerdict, isInsufficientEvidence } from "./lib/calculations";
 
 export default function App() {
@@ -32,6 +33,9 @@ function Calculator() {
   const [selectedModel, setSelectedModel] = useState<string | null>(initialUrl.model);
   const [channel, setChannel] = useState<SalesChannel>(initialUrl.channel);
   const [priceText, setPriceText] = useState(initialUrl.price);
+  const [mode, setMode] = useState<AppMode>(initialUrl.mode);
+  const priceRef = useRef<HTMLInputElement>(null);
+  const searchRef = useRef<HTMLInputElement>(null);
 
   const rows = state.status === "ready" ? state.rows : null;
   const groups = useMemo(() => (rows ? groupByModel(rows) : []), [rows]);
@@ -53,8 +57,40 @@ function Calculator() {
   const row = selected?.rows[channel];
 
   useEffect(() => {
-    writeUrlState({ model: selectedModel, channel, price: price.status === "valid" ? priceText.trim() : "" });
-  }, [selectedModel, channel, priceText, price.status]);
+    writeUrlState({
+      mode,
+      model: selectedModel,
+      channel,
+      price: price.status === "valid" ? priceText.trim() : "",
+    });
+  }, [mode, selectedModel, channel, priceText, price.status]);
+
+  // A confirmed scan hands the model to the calculator and puts the cursor on
+  // the asking price, keeping the Local/eBay choice the user already made.
+  // Runs after the calculator has rendered, hence the animation-frame hop.
+  const focusAfterRender = useCallback((target: "price" | "search") => {
+    requestAnimationFrame(() => {
+      const element = target === "price" ? priceRef.current : searchRef.current;
+      if (!element) return;
+      element.focus({ preventScroll: true });
+      element.scrollIntoView?.({ block: "center", behavior: "smooth" });
+    });
+  }, []);
+
+  const pricedModelNumbers = useMemo(() => new Set(groups.map((g) => g.model_number)), [groups]);
+
+  const confirmScannedModel = useCallback((modelNumber: string) => {
+    setSelectedModel(modelNumber);
+    setQuery("");
+    setSyncedQueryFor(null);
+    setMode("calculator");
+    focusAfterRender("price");
+  }, [focusAfterRender]);
+
+  const searchManually = useCallback(() => {
+    setMode("calculator");
+    focusAfterRender("search");
+  }, [focusAfterRender]);
 
   return (
     <div className="min-h-screen">
@@ -65,13 +101,26 @@ function Calculator() {
         refreshing={state.status === "ready" && state.refreshing}
         refreshError={state.status === "ready" ? state.refreshError : null}
         onRefresh={refresh}
+        mode={mode}
+        onModeChange={setMode}
       />
 
       <main className="mx-auto grid max-w-6xl gap-5 px-4 pt-5 lg:grid-cols-[minmax(0,26rem)_minmax(0,1fr)] lg:gap-8">
         {state.status === "loading" && <LoadingState />}
         {state.status === "error" && <DataErrorState message={state.error} onRetry={retry} />}
 
-        {state.status === "ready" && (
+        {state.status === "ready" && mode === "scan" && (
+          <div className="mx-auto w-full max-w-3xl lg:col-span-2">
+            <ScanTool
+              pricedModelNumbers={pricedModelNumbers}
+              scannerAvailable={sourceInfo.kind === "live"}
+              onConfirm={confirmScannedModel}
+              onSearchManually={searchManually}
+            />
+          </div>
+        )}
+
+        {state.status === "ready" && mode === "calculator" && (
           <>
             <div className="space-y-4 lg:sticky lg:top-4 lg:self-start">
               <section aria-label="Deal inputs" className="space-y-4 rounded-lg border border-line bg-surface p-4">
@@ -81,6 +130,7 @@ function Calculator() {
                   onQueryChange={setQuery}
                   selected={selected}
                   onSelect={(g) => setSelectedModel(g?.model_number ?? null)}
+                  inputRef={searchRef}
                 />
                 {missingLinkedModel && (
                   <p role="status" className="rounded-md bg-sunk p-3">
@@ -88,7 +138,7 @@ function Calculator() {
                   </p>
                 )}
                 <div className="grid grid-cols-1 gap-4 min-[420px]:grid-cols-2 lg:grid-cols-1">
-                  <PriceInput value={priceText} parsed={price} onChange={setPriceText} />
+                  <PriceInput value={priceText} parsed={price} onChange={setPriceText} inputRef={priceRef} />
                   <ChannelToggle value={channel} onChange={setChannel} />
                 </div>
               </section>

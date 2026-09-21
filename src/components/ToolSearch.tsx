@@ -1,4 +1,4 @@
-import { useId, useMemo, useRef, useState, type KeyboardEvent } from "react";
+import { useId, useMemo, useRef, useState, type KeyboardEvent, type RefObject } from "react";
 import type { ToolGroup } from "../types/catalog";
 import { searchTools } from "../lib/search";
 import { selectionLabel, shortBrand } from "../lib/catalog";
@@ -10,13 +10,15 @@ interface ToolSearchProps {
   onQueryChange: (query: string) => void;
   selected: ToolGroup | null;
   onSelect: (group: ToolGroup | null) => void;
+  inputRef?: RefObject<HTMLInputElement | null>;
 }
 
-export function ToolSearch({ groups, query, onQueryChange, selected, onSelect }: ToolSearchProps) {
+export function ToolSearch({ groups, query, onQueryChange, selected, onSelect, inputRef }: ToolSearchProps) {
   const id = useId();
   const listId = `${id}-list`;
   const hintId = `${id}-hint`;
-  const inputRef = useRef<HTMLInputElement>(null);
+  const localRef = useRef<HTMLInputElement>(null);
+  const boxRef = inputRef ?? localRef;
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState(0);
 
@@ -72,7 +74,7 @@ export function ToolSearch({ groups, query, onQueryChange, selected, onSelect }:
       </label>
       <div className="relative mt-1">
         <input
-          ref={inputRef}
+          ref={boxRef}
           id={`${id}-input`}
           type="text"
           role="combobox"
@@ -105,7 +107,7 @@ export function ToolSearch({ groups, query, onQueryChange, selected, onSelect }:
             onClick={() => {
               onQueryChange("");
               onSelect(null);
-              inputRef.current?.focus();
+              boxRef.current?.focus();
             }}
             className="absolute right-1.5 top-1/2 min-h-10 -translate-y-1/2 rounded px-3 text-sm font-medium text-muted hover:text-ink"
           >

@@ -5,6 +5,17 @@
 [build.environment]
   NODE_VERSION = "22"
 
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+
+# The scan endpoint must be matched before the SPA catch-all below, or the
+# function would be swallowed and return index.html.
+[[redirects]]
+  from = "/api/identify-tool"
+  to = "/.netlify/functions/identify-tool"
+  status = 200
+
 [[redirects]]
   from = "/*"
   to = "/index.html"
@@ -16,7 +27,12 @@
     X-Frame-Options = "DENY"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
-    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+    Permissions-Policy = "camera=(self), microphone=(), geolocation=()"
+
+[[headers]]
+  for = "/api/*"
+  [headers.values]
+    Cache-Control = "no-store"
 
 [[headers]]
   for = "/assets/*"

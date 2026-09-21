@@ -1,4 +1,5 @@
 import { expect, test } from "@playwright/test";
+import { stubCatalog } from "./support";
 
 // Critical calculator flow. Run against a Netlify Deploy Preview with:
 //   PLAYWRIGHT_BASE_URL=https://deploy-preview-N--your-site.netlify.app npm run test:e2e
@@ -6,6 +7,8 @@ import { expect, test } from "@playwright/test";
 // update them if Codex's weekly refresh moves the thresholds.
 
 test.beforeEach(async ({ page }) => {
+  await stubCatalog(page);
+
   // Guard: the app may only READ public.tool_value_catalog.
   page.on("request", (request) => {
     const url = request.url();

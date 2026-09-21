@@ -1,4 +1,6 @@
 import type { CatalogSourceInfo } from "../types/catalog";
+import type { AppMode } from "../lib/urlState";
+import { AppModeSwitch } from "./AppModeSwitch";
 import { formatDate } from "../lib/format";
 
 interface HeaderProps {
@@ -8,9 +10,20 @@ interface HeaderProps {
   refreshing: boolean;
   refreshError: string | null;
   onRefresh: () => void;
+  mode: AppMode;
+  onModeChange: (mode: AppMode) => void;
 }
 
-export function Header({ sourceInfo, lastRefresh, canRefresh, refreshing, refreshError, onRefresh }: HeaderProps) {
+export function Header({
+  sourceInfo,
+  lastRefresh,
+  canRefresh,
+  refreshing,
+  refreshError,
+  onRefresh,
+  mode,
+  onModeChange,
+}: HeaderProps) {
   return (
     <header className="border-b border-line bg-surface">
       <div className="mx-auto flex max-w-6xl flex-wrap items-end justify-between gap-x-6 gap-y-2 px-4 pb-3 pt-4">
@@ -36,6 +49,9 @@ export function Header({ sourceInfo, lastRefresh, canRefresh, refreshing, refres
             </button>
           </div>
         )}
+      </div>
+      <div className="mx-auto max-w-6xl px-4 pb-3">
+        <AppModeSwitch value={mode} onChange={onModeChange} />
       </div>
       {refreshError && (
         <p role="alert" className="mx-auto max-w-6xl px-4 pb-3 text-sm text-loss">

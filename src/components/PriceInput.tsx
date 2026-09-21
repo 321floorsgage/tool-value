@@ -1,4 +1,4 @@
-import { useId } from "react";
+import { useId, type RefObject } from "react";
 import type { PriceParseResult } from "../lib/price";
 import { sanitizePriceKeystrokes } from "../lib/price";
 
@@ -6,9 +6,10 @@ interface PriceInputProps {
   value: string;
   parsed: PriceParseResult;
   onChange: (value: string) => void;
+  inputRef?: RefObject<HTMLInputElement | null>;
 }
 
-export function PriceInput({ value, parsed, onChange }: PriceInputProps) {
+export function PriceInput({ value, parsed, onChange, inputRef }: PriceInputProps) {
   const id = useId();
   const invalid = parsed.status === "invalid";
   return (
@@ -21,6 +22,7 @@ export function PriceInput({ value, parsed, onChange }: PriceInputProps) {
           $
         </span>
         <input
+          ref={inputRef}
           id={id}
           type="text"
           inputMode="decimal"
